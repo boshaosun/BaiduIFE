@@ -7,6 +7,13 @@ body {
     text-align: center;
 }
 
+/* About Me页通用标题 */
+.about_title {
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+}
+
 /* 导航条样式表 */
 nav li {
     list-style: none;
@@ -57,6 +64,37 @@ nav a {
     width: 150px;
 }
 
+#web {
+    color: red;
+}
+
+section dt {
+    font-weight: bold;
+}
+
+.myself {
+    text-indent: 2em;
+}
+
+.experience dt {
+    font-weight: bold;
+    color: white;
+}
+
+.experience dd {
+    color: rgb(9, 103, 139);
+}
+
+.skills li {
+    list-style: none;
+}
+
+.sks {
+    border: 1px;
+    background-color: black;
+    width: 200px;
+    height: 10px;
+}
 
 /* Portfolio页面样式表 */
 
@@ -94,8 +132,6 @@ nav a {
     font-size: 30px;
     border-radius: 80px;
 }
-
-
 
 /* Contact页面样式表 */
 
