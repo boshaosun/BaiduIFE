@@ -1,0 +1,86 @@
+body {
+    background-color: rgb(143, 214, 196);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* 导航条样式表 */
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Welcome页面样式表 */
+
+#sypic {
+    /* 首页图片圆角 */
+    border-radius: 100px;
+    width: 150px;
+}
+
+.Welcome > h1 {
+    font-size: 50px;
+    color: rgb(98, 118, 231);
+    font-weight: bold;
+    text-shadow: 2px 1px 2px #000;
+}
+
+.Welcome > p {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.Welcome > hr {
+    width: 70%;
+    height:10px;
+    border: none;
+    background-color: lightslategray;
+}
+
+/* About Me页面样式表 */
+.leftspace > img {
+    border-radius: 100px;
+    width: 150px;
+}
+
+
+/* Portfolio页面样式表 */
+.Portfolio button {
+    font-size: 14px;
+    color: #666;
+    text-shadow: 0 0 1px rgba(0,0,0,0.6);
+}
+
+.Portfolio p {
+    font-size: 20px;
+    color: #666;
+    text-shadow: 0 0 1px rgba(0,0,0,0.6);
+}
+
+
+
+/* Contact页面样式表 */
+
+/* Contact h1 h2通用样式 */
+.contact-zt {
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.Contact a {
+    color: navy;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
