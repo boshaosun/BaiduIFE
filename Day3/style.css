@@ -79,12 +79,12 @@ nav a {
 .contact-zt {
     font-size: 28px;
     font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 13px rgba(0, 0, 0, 0.6);
 }
 
 .Contact a {
     color: navy;
     font-size: 40px;
     font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
 }
