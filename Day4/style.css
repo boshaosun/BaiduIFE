@@ -18,6 +18,7 @@ body {
 .NavBar {
     /* 导航条跟随页面滚动 */
     position: fixed;
+    z-index: 99999;
 }
 
 nav li {
@@ -77,9 +78,41 @@ nav a {
 }
 
 /* About Me页面样式表 */
+
+.AboutMe{
+    margin: 0 20px;
+    margin-bottom: 65px;
+    padding-top: 55px;
+}
+
+.leftspace {
+    background-color: pink;
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    height:540px;
+}
+
+.rightspace {
+    position: absolute;
+    background-color: lightblue;
+    top: 679px;
+    height: 485px;
+    left: 420px;
+    width: 775px;
+    padding-top: 55px;
+}
+
+.information {
+    margin-left: 10px;
+}
+
 .leftspace > img {
     border-radius: 100px;
     width: 150px;
+    margin-left: 110px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #web {
@@ -92,19 +125,44 @@ section dt {
 
 .myself {
     text-indent: 2em;
+    margin: 10px;
+    margin-top: 15px;
+}
+
+.education {
+    margin-left: 10px;
+}
+
+.education h5 {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.experience {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .experience dt {
+    margin-top: 10px;
     font-weight: bold;
     color: white;
 }
 
 .experience dd {
     color: rgb(9, 103, 139);
+    margin-top: 5px;
+}
+
+.skills {
+    margin-top: 20px;
+    margin: 10px;
+    
 }
 
 .skills li {
     list-style: none;
+    margin: 10px;
 }
 
 .sks {
@@ -112,6 +170,16 @@ section dt {
     background-color: black;
     width: 200px;
     height: 10px;
+    border-radius: 80px;
+}
+
+.sks div{
+    border: 1px;
+    background-color: red;
+    width: 150px;
+    height: 10px;
+    z-index: 998;
+    border-radius: 80px;
 }
 
 /* Portfolio页面样式表 */
