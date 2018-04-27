@@ -1,0 +1,22 @@
+.inl dt,dd {
+    display: inline-block;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dt,dd { 
+    margin-left: 0;
+}
+
+dd {
+    margin-bottom: 10px;
+}
+
+.inl dd {
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+
