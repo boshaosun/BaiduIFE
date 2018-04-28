@@ -14,23 +14,27 @@ header h1 {
     padding: 15px 0 0 20px;
 }
 
-section{
-    display: inline-block;
-}
-h2 {
-    
-    /* display: inline-block; */
-    background-color: lightblue;
-    height: 100px;
-    width: 100px;
-    font-size: 15px;
-    margin: 0;
-    padding: 50px 0 0 35px;
-    /* overflow: hidden; */
+section {
+   overflow: hidden;
+   border-bottom: 0.5px solid;
 }
 
-dt,dd {
-    
+h2 {
+    display: inline-block;
+    margin: 0;
+    padding: 50px 0 0 0;
+    width: 100px;
+    height: 70px;
+    float: left;
+    background-color: lightblue;
+}
+
+dl {
+    margin-top: 25px;
+    margin-left: 110px; 
+}
+
+dt,dd {    
     display: inline-block;
 }
 
