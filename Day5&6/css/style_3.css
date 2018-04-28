@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: pink;
+    height: 60px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    padding: 15px 0 0 20px;
+}
+
+section{
+    display: inline-block;
+}
+h2 {
+    
+    /* display: inline-block; */
+    background-color: lightblue;
+    height: 100px;
+    width: 100px;
+    font-size: 15px;
+    margin: 0;
+    padding: 50px 0 0 35px;
+    /* overflow: hidden; */
+}
+
+dt,dd {
+    
+    display: inline-block;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dt,dd { 
+    margin-left: 0;
+}
+
+.change-style dd {
+    margin: 0 40px 0 10px;
+}
