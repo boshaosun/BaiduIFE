@@ -6,12 +6,8 @@ dt {
     font-weight: bold;
 }
 
-dt,dd { 
-    margin-left: 0;
-}
-
-dd {
-    margin-bottom: 10px;
+dd { 
+    margin: 0 0 10px 0;
 }
 
 .change-style dd {
