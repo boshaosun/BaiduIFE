@@ -1,0 +1,129 @@
+/* reset css */
+html,body,header,nav,aside,main,footer,ul,li,ol,dl,dt,dd,
+h1,h2,h3,h4,div,span,p,a,input,button,img,i,strong,
+video,audio,section{
+    padding:0;
+    margin:0;
+    border:0;
+}
+:focus{
+    outline: 0;
+}
+ul,li,ol,dl,dt,dd{
+    list-style: none;
+}
+a{
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
+
+/* index css */
+
+/* header区域 */
+header {
+    background-color: black;
+}
+
+.h-content {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    height: 70px;    
+}
+
+.h-logo {
+    color: white;
+}
+
+.h-nav {
+   position: absolute;
+   top: 0;
+   right: 0;
+   color: white;
+}
+
+/* banner区域 */
+.banner {
+    background-color: green;
+    height: 200px;
+}
+
+.b-page-nav {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav-page {
+    position: absolute;
+    left: 880px;
+    top: 175px;
+}
+
+.nav-page span {
+    border: 1px solid white;
+    margin-left: 3px;
+    padding: 0 3px;
+    background-color: lightblue;
+}
+
+/* 主导航区域 */
+.main-nav {
+    width: 960px;
+    margin: 10px auto;
+}
+
+.m-n-item {
+    border: 1px solid black;
+}
+
+/* 内容区域 */
+main {
+    width: 960px;
+    margin: 0 auto;
+   
+}
+
+.border div {
+    border: 1px solid black;
+    margin: 3px;
+}
+
+.first-row {
+     display: flex;
+}
+
+.first-row div{
+    padding: 80px;
+    flex: 3;
+}
+
+.second-row {
+    display: flex;
+}
+
+.second-row div{
+   padding: 80px;
+   flex: 4;
+}
+
+.third-row {
+    display: flex;
+}
+
+.third-row div{
+   padding: 80px;
+   flex: 3;
+}
+
+/* footer区域 */
+footer {
+    background-color: black;
+    height: 80px;
+    text-align: center;
+}
+
+footer h2 {
+    color: white;
+}
