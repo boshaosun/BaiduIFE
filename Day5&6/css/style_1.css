@@ -1,16 +1,19 @@
-.change-style dt,dd {
-    display: inline-block;
+/* 基本样式 */
+
+.change-style dt,.change-style dd {
+    display: inline;
+}
+
+/* 基本信息和联系方式的dd元素左右边距 */
+.change-style dd {
+    margin: 0 40px 0 10px;
 }
 
 dt {
     font-weight: bold;
 }
 
-dd { 
+/* 能力描述、教育经历和项目经历的dd元素下边距 */
+.able dd,.education dd,.project dd { 
     margin: 0 0 10px 0;
 }
-
-.change-style dd {
-    margin: 0 40px 0 10px;
-}
-

@@ -1,46 +1,65 @@
+/* 基本样式 */
+.change-style dt,.change-style dd {
+    
+    display: inline;
+}
+
+.change-style dt {
+    font-weight: bold;
+}
+
+/* 基本信息和联系方式的dd元素左右边距 */
+.change-style dd {
+    margin: 0 40px 0 10px;
+}
+
+.able dt,.education dt,.project dt {
+    font-weight: bold;
+    float: left;
+}
+
+.able dd,.education dd,.project dd { 
+    margin: 0;
+}
+
+/* 混合布局 */
+
+/* 头部样式 */
 header {
-    background-color: pink;
-    height: 50px;
-    width: 100%;
+    background-color: rgb(133, 133, 133);
+    height: 60px;
 }
 
 header h1 {
-    padding: 15px 0 0 20px;
-    font-size: 15px;
+    font-size: 20px;
     color: white;
-    box-sizing: border-box;
+    margin-left: 30px;
+    /* 相对定位实现垂直居中 */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-dt,dd {
-    display: inline-block;
-}
-
-dt {
-    font-weight: bold;
-    margin-left: 10px;
-}
-
-dd { 
-    margin: 0;
-}
-
-.change-style dd {
-    margin: 0 30px 0 0;
+/* 主体样式 */
+section {
+    border: .5px solid rgb(133, 133, 133);
+    margin-top: .5px;
+    overflow: hidden;
+    line-height: 40px;
 }
 
 h2 {
+    background-color: rgb(214, 214, 214);
+    height: 100px;
+    margin: .5px 5px .5px 0;
+    width: 100px;
+    height: 100px;
+    font-size: 12px;
     float: left;
-    background: #d6d6d6;
-    clear: left;
-    width: 100px;  
-    font-size: 10px;
-    padding: 0;
-    margin: 0;
-    line-height: 100px; 
     text-align: center;
+    line-height:100px;
 }
 
-section {
-    overflow: hidden;
-    border: 1px solid black;
+dl {
+    margin: 0;
 }

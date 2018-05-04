@@ -1,35 +1,40 @@
-header { 
-    box-sizing:border-box;
-    float: left;
-    background-color: lightblue;
-    height: 750.88px;
-    width: 180px;
-}
-main {
-    box-sizing:border-box;
-    background-color: pink;
-    display: inline-block;
-    padding-left: 20px;  
-    height: 750.88px; 
+/* 基本样式 */
+.change-style dt,.change-style dd {
+    display: inline;
 }
 
-h1 {
-    margin: 70px 0 0 60px;
-    color: white;
-}
-
-.change-style dt,dd {
-    display: inline-block;
+/* 基本信息和联系方式的dd元素左右边距 */
+.change-style dd {
+    margin: 0 40px 0 10px;
 }
 
 dt {
     font-weight: bold;
 }
 
-dd { 
+/* 能力描述、教育经历和项目经历的dd元素下边距 */
+.able dd,.education dd,.project dd { 
     margin: 0 0 10px 0;
 }
 
-.change-style dd {
-    margin: 0 40px 0 10px;
+/* 两栏布局 */
+
+/* 左边栏 */
+header {
+    background-color: rgb(101, 165, 250);
+    width: 15%;
+    float: left;
+    height: 700px;
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 50px;
+    color: white;
+}
+
+/* 右边栏 */
+main {
+    float: left;
+    margin-left: 10px;
 }
