@@ -7,33 +7,50 @@
     <title>Test</title>
 </head>
 <body>
+    <h3>Day16</h3>
+    <p id="content-wrapper">Hello World</p>
+    <script>
+        console.log(document.getElementById("content-wrapper").innerHTML);
+    </script>
+    <hr>
+    <p id="content-wrapper-second">你是谁？</p>
+    <input id="name-input" type="text" placeholder="输入你的名字">
+    <button id="send-btn">发送</button>
+    <script>        
+        document.getElementById("send-btn").onclick = function() {
+            document.getElementById("content-wrapper-second").innerHTML = 'Hello ' + document.getElementById("name-input").value;
+        }
+    </script>
+    <hr>
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn" onclick=jia()>加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+        function jia(){
+            var num1 = document.getElementById("first-number");
+            var num2 = document.getElementById("second-number");
+            var result = document.getElementById("result");
+            result.innerHTML = Number(num1.value) + Number(num2.value);
+        }
+    </script>
+    <hr>
     <img src="http://img2.imgtn.bdimg.com/it/u=2053393607,1341771837&fm=27&gp=0.jpg" alt="" id="placeholder">
     <button id="pic1">图片1</button>
     <button id="pic2">图片2</button>
-    <button id="pic3">图片3</button>
-    <button id="pic4">图片4</button>
         <script>
         document.getElementById("pic1").onclick = function(){
             var picture = document.getElementById("placeholder");
-            var source = "http://img5.imgtn.bdimg.com/it/u=1296525794,139709127&fm=27&gp=0.jpg";
+            var source = "https://i.loli.net/2018/05/18/5afe429bb7c7e.jpg";
             picture.setAttribute("src",source);
         }
         
         document.getElementById("pic2").onclick = function(){
             var picture = document.getElementById("placeholder");
-            var source = "http://img3.imgtn.bdimg.com/it/u=4165840894,1362085233&fm=27&gp=0.jpg";
-            picture.setAttribute("src",source);
-        }
-
-        document.getElementById("pic3").onclick = function(){
-            var picture = document.getElementById("placeholder");
-            var source = "http://img0.imgtn.bdimg.com/it/u=4179302163,1773018643&fm=27&gp=0.jpg";
-            picture.setAttribute("src",source);
-        }
-
-        document.getElementById("pic4").onclick = function(){
-            var picture = document.getElementById("placeholder");
-            var source = "http://img4.imgtn.bdimg.com/it/u=963285498,592433578&fm=27&gp=0.jpg";
+            var source = "https://i.loli.net/2018/05/18/5afe429bc37b3.jpg";
             picture.setAttribute("src",source);
         }
     </script>
