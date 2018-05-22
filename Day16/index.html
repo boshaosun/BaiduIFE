@@ -25,9 +25,9 @@
     <input id="first-number" type="number" value="0" placeholder="第一个数字">
     <input id="second-number" type="number" value="0" placeholder="第二个数字">
     <button id="add-btn" onclick=jia()>加</button>
-    <button id="minus-btn">减</button>
-    <button id="times-btn">乘</button>
-    <button id="divide-btn">除</button>
+    <button id="minus-btn" onclick=jian()>减</button>
+    <button id="times-btn" onclick=cheng()>乘</button>
+    <button id="divide-btn" onclick=chu()>除</button>
     <p id="result">运算结果</p>
     <script>
         function jia(){
@@ -35,6 +35,24 @@
             var num2 = document.getElementById("second-number");
             var result = document.getElementById("result");
             result.innerHTML = Number(num1.value) + Number(num2.value);
+        }
+        function jian(){
+            var num1 = document.getElementById("first-number");
+            var num2 = document.getElementById("second-number");
+            var result = document.getElementById("result");
+            result.innerHTML = Number(num1.value) - Number(num2.value);
+        }
+        function cheng(){
+            var num1 = document.getElementById("first-number");
+            var num2 = document.getElementById("second-number");
+            var result = document.getElementById("result");
+            result.innerHTML = Number(num1.value) * Number(num2.value);
+        }
+        function chu(){
+            var num1 = document.getElementById("first-number");
+            var num2 = document.getElementById("second-number");
+            var result = document.getElementById("result");
+            result.innerHTML = Number(num1.value) / Number(num2.value);
         }
     </script>
     <hr>
