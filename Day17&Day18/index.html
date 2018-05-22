@@ -4,14 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Day17&Day18</title>
 </head>
 <body>
+    <input id="first-number" type="number" value="0" placeholder="第一个数字">
+    <input id="second-number" type="number" value="0" placeholder="第二个数字">
+    <button id="add-btn" onclick="jia()">加</button>
+    <button id="minus-btn" onclick="jian()">减</button>
+    <button id="times-btn" onclick="cheng()">乘</button>
+    <button id="divide-btn" onclick="chu()">除</button>
+    <p id="result">运算结果</p>
     <script>
-        for(i=1;i<=9;i++){
-            for(k=1;k<=9;k++){
-                document.write(k + "+" + i)
+        function jia(){
+            var num1 = document.getElementById("first-number");
+            var num2 = document.getElementById("second-number");
+            var result = document.getElementById("result");
+            result.innerHTML = Number(num1.value) + Number(num2.value);
+        }
+        function jian(){
+            var num1 = document.getElementById("first-number");
+            var num2 = document.getElementById("second-number");
+            var result = document.getElementById("result");
+            result.innerHTML = Number(num1.value) - Number(num2.value);
+        }
+        function cheng(){
+            var num1 = document.getElementById("first-number");
+            var num2 = document.getElementById("second-number");
+            var result = document.getElementById("result");
+            result.innerHTML = Number(num1.value) * Number(num2.value);
+        }
+        function chu(){
+            var num1 = document.getElementById("first-number");
+            var num2 = document.getElementById("second-number");
+            if(num1.value == 0){
+                console.log("错误");
+            }           
+            var result = document.getElementById("result");
+            result.innerHTML = Number(num1.value) / Number(num2.value);
+        }
+    </script>
+    <hr>
+    <h3>3的小游戏 - 请看控制台</h3>
+    <script>
+        var i;
+        for(i=1;i<=100;i++){
+            if(i % 3==0){
+                console.log("PA");
+                continue;
             }
+            console.log(i);
         }
     </script>
 </body>
