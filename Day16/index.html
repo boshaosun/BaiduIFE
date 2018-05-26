@@ -4,72 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Test</title>
+    <title>Day16</title>
+    <style>
+        .demo {
+            border: 1px solid blue;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        #picture {
+            height: 200px;
+            width: 200px;
+        }
+    </style>
 </head>
 <body>
-    <h3>Day16</h3>
-    <p id="content-wrapper">Hello World</p>
+    <!-- Demo1 -->
+    <div class="demo">
+        <h3>Demo1</h3>
+        <p id="content-wrapper">你是谁？</p>
+        <input type="text" id="name-input" placeholder="输入你的名字">
+        <button id="send-btn">发送</button>
+    </div>
+
+    <!-- Demo2 -->
+    <div class="demo">
+        <h3>Demo2</h3>
+        <p>请点击图片查看切换效果</p>
+        <img src="./images/cat.jpg" id="picture">
+    </div>
+
+    <!-- Demo3 -->
+    <div class="demo">
+        <h3>Demo3</h3>
+        <input id="first-number" type="number" value="" placeholder="第一个数字">
+        <input id="second-number" type="number" value="" placeholder="第二个数字">
+        <button id="add-btn">加</button>
+        <button id="minus-btn">减</button>
+        <button id="times-btn">乘</button>
+        <button id="divide-btn">除</button>
+        <p id="result">运算结果：</p>
+    </div>
+    
     <script>
-        console.log(document.getElementById("content-wrapper").innerHTML);
-    </script>
-    <hr>
-    <p id="content-wrapper-second">你是谁？</p>
-    <input id="name-input" type="text" placeholder="输入你的名字">
-    <button id="send-btn">发送</button>
-    <script>        
-        document.getElementById("send-btn").onclick = function() {
-            document.getElementById("content-wrapper-second").innerHTML = 'Hello ' + document.getElementById("name-input").value;
+        // Demo1
+        document.getElementById("send-btn").onclick = function(){
+            document.getElementById("content-wrapper").innerHTML = 'Hello' + '&nbsp;' + document.getElementById("name-input").value;
         }
-    </script>
-    <hr>
-    <input id="first-number" type="number" value="0" placeholder="第一个数字">
-    <input id="second-number" type="number" value="0" placeholder="第二个数字">
-    <button id="add-btn" onclick=jia()>加</button>
-    <button id="minus-btn" onclick=jian()>减</button>
-    <button id="times-btn" onclick=cheng()>乘</button>
-    <button id="divide-btn" onclick=chu()>除</button>
-    <p id="result">运算结果</p>
-    <script>
-        function jia(){
-            var num1 = document.getElementById("first-number");
-            var num2 = document.getElementById("second-number");
-            var result = document.getElementById("result");
-            result.innerHTML = Number(num1.value) + Number(num2.value);
+
+        //Demo2
+        var pic = document.getElementById("picture");
+        pic.onclick = function(){
+            if (pic.src.match("cat")){
+                pic.src = "./images/pig.jpg";
+            }else{
+                pic.src = "./images/cat.jpg";
+            }
         }
-        function jian(){
-            var num1 = document.getElementById("first-number");
-            var num2 = document.getElementById("second-number");
-            var result = document.getElementById("result");
-            result.innerHTML = Number(num1.value) - Number(num2.value);
+
+        //Demo3
+        var first = document.getElementById("first-number");
+        var second = document.getElementById("second-number");
+        document.getElementById("add-btn").onclick = function(){            
+            var result = Number(first.value) + Number(second.value);
+            document.getElementById("result").innerHTML = "运算结果：" + result;
         }
-        function cheng(){
-            var num1 = document.getElementById("first-number");
-            var num2 = document.getElementById("second-number");
-            var result = document.getElementById("result");
-            result.innerHTML = Number(num1.value) * Number(num2.value);
+        document.getElementById("minus-btn").onclick = function(){            
+            var result = Number(first.value) - Number(second.value);
+            document.getElementById("result").innerHTML = "运算结果：" + result;
         }
-        function chu(){
-            var num1 = document.getElementById("first-number");
-            var num2 = document.getElementById("second-number");
-            var result = document.getElementById("result");
-            result.innerHTML = Number(num1.value) / Number(num2.value);
+        document.getElementById("times-btn").onclick = function(){            
+            var result = Number(first.value) * Number(second.value);
+            document.getElementById("result").innerHTML = "运算结果：" + result;
         }
-    </script>
-    <hr>
-    <img src="http://img2.imgtn.bdimg.com/it/u=2053393607,1341771837&fm=27&gp=0.jpg" alt="" id="placeholder">
-    <button id="pic1">图片1</button>
-    <button id="pic2">图片2</button>
-        <script>
-        document.getElementById("pic1").onclick = function(){
-            var picture = document.getElementById("placeholder");
-            var source = "https://i.loli.net/2018/05/18/5afe429bb7c7e.jpg";
-            picture.setAttribute("src",source);
-        }
-        
-        document.getElementById("pic2").onclick = function(){
-            var picture = document.getElementById("placeholder");
-            var source = "https://i.loli.net/2018/05/18/5afe429bc37b3.jpg";
-            picture.setAttribute("src",source);
+        document.getElementById("divide-btn").onclick = function(){            
+            var result = Number(first.value) / Number(second.value);
+            document.getElementById("result").innerHTML = "运算结果：" + result;
         }
     </script>
 </body>
