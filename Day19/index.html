@@ -1,17 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Day19</title>
-</head>
-<body>
-    <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">    
-    <title>IFE ECMAScript</title>
+    <title>Day19</title>
 </head>
 <body>        
     <div id="wrapper">
@@ -40,30 +31,93 @@
             </div>
             <img src="">
             <p class="">Some Text</p>
-        </div>      
+        </div>              
     </div>
-    <script>
+    <div>
+        <h5>普通选择器</h5>
+        <button onclick="getAllListItem()">Demo1</button>
+        <button onclick="findAllHtmlSpanInOneSection('news-normal')">Demo2</button>
+        <button onclick="findListItem('news-top', 'spanCont')">Demo3</button>
+        <button onclick="getActiveLinkContent('news-normal')">Demo4</button>        
+    </div>
+    <div>
+        <h5>高级选择器</h5>
+        <button onclick="highGetAllListItem()">Demo1</button>
+        <button onclick="highFindAllHtmlSpanInOneSection('#news-normal')">Demo2</button>
+        <button onclick="highFindListItem('#news-top', 'spanCont')">Demo3</button>
+        <button onclick="highGetActiveLinkContent('#news-normal')">Demo4</button>
+    </div>
+    
 
+    <script>
+    // 普通选择器
     function getAllListItem() {
         // 返回页面中所有li标签
-        var yaoli = document.getElementsByTagName("li");
+        console.log(document.getElementsByTagName("li"));
     }
-
+    
     function findAllHtmlSpanInOneSection(sectionId) {
         // 返回某个section下所有span中内容为HTML的span标签
+        var spanlist = document.getElementById(sectionId).getElementsByTagName("span");
+        for(i=0;i<spanlist.length;i++){
+            if(spanlist[i].innerHTML == "HTML"){
+                console.log(spanlist[i]);
+            }
+        }
     }
 
     function findListItem(sectionId, spanCont) {
         // 返回某个section下，所有所包含span内容为spanCont的LI标签
+        var spanlist = document.getElementById(sectionId).getElementsByTagName("span");
+        for(i=0;i<spanlist.length;i++){
+            if(spanlist[i].innerHTML == spanCont){
+                console.log(spanlist[i].parentNode);
+            }
+        }
     }
 
     function getActiveLinkContent(sectionId) {
         // 返回某个section下，class为active的链接中包含的文字内容
-        
+        var spanlist = document.getElementById(sectionId).getElementsByClassName("active");
+        for(i=0;i<spanlist.length;i++){
+            console.log(spanlist[i].innerHTML);
+        }       
+    }
+    
+    // 高级选择器
+    function highGetAllListItem() {
+        // 返回页面中所有li标签
+        console.log(document.querySelectorAll("li"));
+    }
+
+    function highFindAllHtmlSpanInOneSection(sectionId) {
+        // 返回某个section下所有span中内容为HTML的span标签
+        var spanlist = document.querySelector(sectionId).querySelectorAll("span");
+        for(i=0;i<spanlist.length;i++){
+             if(spanlist[i].innerHTML == "HTML"){
+                 console.log(spanlist[i]);
+             }
+         }
+    }
+
+    function highFindListItem(sectionId, spanCont) {
+        // 返回某个section下，所有所包含span内容为spanCont的LI标签
+        var spanlist = document.querySelector(sectionId).querySelectorAll("span");
+        for(i=0;i<spanlist.length;i++){
+            if(spanlist[i].innerHTML == spanCont){
+                console.log(spanlist[i].parentNode);
+            }
+        }
+    }
+
+    function highGetActiveLinkContent(sectionId) {
+        // 返回某个section下，class为active的链接中包含的文字内容
+        var spanlist = document.querySelector(sectionId).querySelectorAll(".active");
+        for(i=0;i<spanlist.length;i++){
+            console.log(spanlist[i].innerHTML);
+        }       
     }
 
     </script>
-</body>
-</html>
 </body>
 </html>
