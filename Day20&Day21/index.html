@@ -4,16 +4,184 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Day16</title>
+    <style>
+        .demo {
+            border: 1px solid blue;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        select {
+            display: none;
+        }
+
+        .palette {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .palette li {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <input id="name" type="text">    
-    <button id="submit-btn" onclick="dianji()">Submit</button>
+    <!-- Demo1 -->
+    <div class="demo">
+        <h3>Demo1</h3>
+        <input id="name" type="text">    
+        <button id="submit-btn">Submit</button>
+    </div>
+
+    <!-- Demo2 -->
+    <div class="demo">
+        <h3>Demo2</h3>
+        <label>
+            <input id="school" name="status" type="radio">
+            School
+        </label>
+        <label>
+            <input id="company" name="status" type="radio">
+            Company
+        </label>
+    
+        <select id="school-select">        
+            <option>北京邮电大学</option>
+            <option>黑龙江大学</option>
+            <option>华中科技大学</option>
+        </select>
+    
+        <select id="company-select">        
+            <option>百度</option>
+            <option>爱奇艺</option>        
+        </select>
+    </div>
+   
+    <!-- Demo3 -->
+    <div class="demo">
+        <h3>Demo3</h3>
+        <ul class="palette">
+                <li style="background-color:crimson"></li>
+                <li style="background-color:bisque"></li>
+                <li style="background-color:blueviolet"></li>
+                <li style="background-color:coral"></li>
+                <li style="background-color:chartreuse"></li>
+                <li style="background-color:darkolivegreen"></li>
+                <li style="background-color:cyan"></li>
+                <li style="background-color:#194738"></li>        
+            </ul>
+        
+            <p class="color-picker"></p>
+    </div>
+
+    <!-- Demo4 -->
+    <div class="demo">
+        <h3>Demo4</h3>
+        <div id="fade-obj" style="width:300px;height:300px;background:#000"></div>
+        <button id="fade-btn">淡出</button>
+    </div>
+
+    <!-- Demo5 -->
+    <div class="demo">
+        <h3>Demo5</h3>
+        <div id="fimg" style="width: 480px; height: 480px; background: url(erik.jpg) no-repeat; background-position: 0 0;"></div>
+    </div>
     <script>
-        function dianji(){
-            var nr = document.getElementById("name");
-            console.log(nr.value);
+        // Demo1
+        var btn = document.querySelector("#submit-btn");
+        var txt = document.querySelector("#name");
+        function data(){
+            console.log(txt.value);
+        }       
+        btn.addEventListener("click",data);
+        txt.addEventListener("keyup",function (event) {
+        var x = event.which || event.keyCode;
+        if (x === 13){
+            data();
+        }else if (x === 27){
+            txt.value = '';
         }
+        })
+
+        //Demo2
+        var school = document.querySelector("#school");
+        var company = document.querySelector("#company");
+        var schoolselect = document.querySelector("#school-select");
+	    var companyselect = document.querySelector('#company-select')
+        school.addEventListener("click",schfocus);
+        company.addEventListener("click",comfocus);
+        function schfocus(){
+            schoolselect.style.display = 'block';
+            companyselect.style.display = 'none';
+        }
+        function comfocus(){
+            companyselect.style.display = 'block';
+            schoolselect.style.display = 'none';
+        }
+        
+        //Demo3
+        var list = document.querySelectorAll("li");
+        for (var i = i = 0, len = list.length; i < len; i++) {
+            list[i].onclick = function(e) {
+                var t = e.target;
+                var c = t.style.backgroundColor;
+                var p = document.getElementsByClassName("color-picker")[0]
+                p.innerHTML = c;
+                p.style.color = c;
+
+            }
+        }
+
+        //Demo4
+        document.getElementById('fade-btn').onclick = toInvisible;
+        function toInvisible(){
+            var g = document.getElementById('fade-obj');
+            var h = document.getElementById('fade-btn');
+            var op = window.getComputedStyle(g).opacity;
+            var num1 = 1;
+            var num2 = 0;
+            if (op > 0){
+                var t1 = setInterval(function (){
+                    h.disabled = true;
+                    num1 -= 0.1;
+                    g.style.opacity = '' + num1;
+                    if (num1 <= 0){
+                        h.disabled = false;
+                        h.innerHTML = '淡入';
+                        clearInterval(t1);
+                    }
+                }, 300);
+            }else {
+                var t2 = setInterval(function (){
+                    h.disabled = true;
+                    num2 += 0.1;
+                    g.style.opacity = '' + num2;
+                    if (num2 >= 1){
+                        h.disabled = false;
+                        h.innerHTML = '淡出';
+                        clearInterval(t2);
+                    }
+                }, 300);
+            } 
+        }
+
+        //Demo5
+        var z = -480;
+            var framep = document.getElementById('fimg');
+            framep.onload = setInterval(function (){
+                var x = framep.style.backgroundPositionY;
+                var y = parseInt(x) + z;
+                framep.style.backgroundPositionY = y + 'px';
+                if (y === -7680){
+                    z = 480;
+                } else if (y === 0){
+                    z = -480;
+                }
+            }, 100)
     </script>
 </body>
 </html>
